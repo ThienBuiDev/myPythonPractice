@@ -11,6 +11,8 @@
 def boxPrint(symbol,width,height):
     if len(symbol) != 1:
         raise Exception("'Symbol' needs to be a string of length 1")
+    if width <= 2 or height <= 2:
+        raise Exception("Width and height must be at at least 2")        
     for i in range(height):
         if i == 0 or i == height - 1:
             for k in range(width):
